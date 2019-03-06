@@ -1,9 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Arshad
- * Date: 05-Mar-19
- * Time: 11:31 AM
+ * Class for handling execution
  */
 
 namespace Arshad\PbSearch;
@@ -15,6 +12,12 @@ use Arshad\PbSearch\Models\SearchResults;
 class PbSearch
 {
 
+    /**
+     * Accepts keywords array and performs search on each engine implementation.
+     *
+     * @param array $keywords array of keywords to search
+     * @return mixed array of results
+     */
     public function search($keywords=array())
     {
         $results = new SearchResults();
